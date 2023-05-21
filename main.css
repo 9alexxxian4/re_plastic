@@ -20,7 +20,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 4px;
+  margin-top: 40px;
 }
 .side_bar .nav_header .menu_bar span {
   display: block;
@@ -31,10 +33,30 @@
 .side_bar .side_bar_list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: -500px;
+}
+.side_bar .side_bar_list li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  align-items: center;
+}
+.side_bar .side_bar_list li a:hover {
+  background-color: #B1D7B4;
+}
+.side_bar .side_bar_list li a i {
+  line-height: 40px;
+  text-align: center;
 }
 .side_bar .side_bar_list li a span {
   display: none;
+}
+.side_bar .theme-wrapper .theme-btn {
+  margin-bottom: 40px;
 }
 .side_bar .theme-wrapper .theme-ball {
   display: none;
