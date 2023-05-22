@@ -26,31 +26,31 @@
       </div>
       <ul class="side_bar_list">
         <li>
-          <a href="#">
+          <a href="#" class="side_bar_cont">
             <i class="fa-solid fa-house fa-lg" style="color: #000000"></i>
             <span class="tooltip">Home</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="side_bar_cont">
             <i class="fa-solid fa-recycle fa-lg" style="color: #000000"></i>
             <span class="tooltip">About</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="side_bar_cont">
             <i class="fa-solid fa-camera fa-lg" style="color: #000000"></i>
             <span class="tooltip">카메라</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="side_bar_cont">
             <i class="fa-solid fa-coins fa-lg" style="color: #000000"></i>
             <span class="tooltip">적립금</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="side_bar_cont">
             <i
               class="fa-solid fa-arrow-right-arrow-left fa-lg"
               style="color: #000000"
@@ -59,13 +59,13 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="side_bar_cont">
             <i class="fa-solid fa-map fa-lg" style="color: #000000"></i>
             <span class="tooltip">지도</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="side_bar_cont">
             <i
               class="fa-solid fa-arrow-right-to-bracket fa-lg"
               style="color: #000000"
@@ -92,9 +92,13 @@
     <script>
       const sideMenu = document.querySelector('.menu_bar');
       const sideBar = document.querySelector('.side_bar');
+      const navContent = document.querySelectorAll('.side_bar_cont');
 
       sideMenu.addEventListener('click', function () {
         sideBar.classList.toggle('open');
+        for (let sideItem of navContent) {
+          sideItem.classList.toggle('side_bar_cont-on');
+        }
       });
     </script>
   </body>
