@@ -58,7 +58,6 @@
   border-radius: 4px;
   padding: 5px;
   align-items: center;
-  justify-content: center;
   transition: all 0.3s ease-in-out;
   color: #000;
 }
@@ -66,23 +65,27 @@
   background-color: #B1D7B4;
 }
 .side_bar .side_bar_list li a i {
+  width: 100%;
   line-height: 40px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 .side_bar .side_bar_list li a span {
   position: absolute;
   display: none;
 }
 .side_bar .side_bar_list li .side_bar_cont-on {
+  justify-content: flex-start;
   width: 100px;
-  justify-content: space-between;
-  gap: 20px;
   transition: all 0.3s ease-in-out;
   padding-left: 10px;
 }
 .side_bar .side_bar_list li .side_bar_cont-on span {
   display: inline-block;
   right: 10px;
+}
+.side_bar .side_bar_list li .side_bar_cont-on i {
+  width: 30%;
 }
 .side_bar .theme-wrapper .theme-btn {
   margin-bottom: 40px;

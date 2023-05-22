@@ -60,15 +60,16 @@
                 border-radius: 4px;
                 padding: 5px;
                 align-items: center;
-                justify-content: center;
                 transition: all 0.3s ease-in-out;
                 color: #000;
                 &:hover {
                     background-color: #B1D7B4;
                 }
                 & i {
+                    width: 100%;
                     line-height: 40px;
                     text-align: center;
+                    transition: all 0.3s ease-in-out;
                 }
                 & span {
                     position: absolute;
@@ -77,14 +78,19 @@
                 
             }
             & .side_bar_cont-on{
+                justify-content: flex-start;
                 width: 100px;
-                justify-content: space-between;
-                gap: 20px;
                 transition: all 0.3s ease-in-out;
-                padding-left: 10px;
+                // 버튼 사이드 갭
+                $button-side-gap: 10px;
+                padding-left: $button-side-gap;
                 & span {
                     display: inline-block;
-                    right:  10px;
+                    right:  $button-side-gap;
+
+                }
+                & i {
+                    width: 30%;
                 }
             }
         }
