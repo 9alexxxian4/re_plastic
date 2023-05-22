@@ -18,19 +18,27 @@
 .side_bar .nav_header .menu_bar {
   width: 30px;
   height: 30px;
+  padding: 0 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 4px;
   margin-top: 40px;
   cursor: pointer;
 }
 .side_bar .nav_header .menu_bar span {
   display: block;
-  width: 22px;
+  width: 100%;
   height: 3px;
   background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.side_bar .nav_header .menu_bar-open span:first-child {
+  width: 90%;
+}
+.side_bar .nav_header .menu_bar-open span:last-child {
+  width: 85%;
 }
 .side_bar .side_bar_list {
   display: flex;

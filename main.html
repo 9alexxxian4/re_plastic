@@ -95,6 +95,7 @@
       const navContent = document.querySelectorAll('.side_bar_cont');
 
       sideMenu.addEventListener('click', function () {
+        sideMenu.classList.toggle('menu_bar-open');
         sideBar.classList.toggle('open');
         for (let sideItem of navContent) {
           sideItem.classList.toggle('side_bar_cont-on');
