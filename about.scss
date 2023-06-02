@@ -97,7 +97,6 @@ $button-side-gap: 10px;
                 width: 100px;
                 transition: all 0.3s ease-in-out;
                 padding-left: $button-side-gap;
-
                 & span {
                     width: 70%;
                     display: block;
@@ -178,20 +177,73 @@ $button-side-gap: 10px;
     top: 0;
     left: 100px;
     width: calc(100% - 100px);
-    height: 100vh;
+    display: table;
     background-color: #fff;
     z-index: 6;
     transition: all 0.5s;
 
-    & img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
+    & .home_wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+
+        & .about_title1 {
+            font-size: 45px;
+            font-weight: 600;
+            font-family: 'EnvironmentR';
+            margin-top: 350px;
+        }
+        
+        & .about_text1 {
+            font-family: 'EnvironmentR';
+            font-size: 25px;
+            text-align: center;
+            line-height: 28px;
+            margin-top: 100px;
+        }
+
+        & .about_img1 {
+            max-width: 700px;
+            margin-top: 100px;
+        }
+        & .btn {
+            border: 1px solid #000;
+            border-radius: 50px;
+            width: 200px;
+            height: 50px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            a {
+                display: block;
+                width: 200px;
+                height: 50px;
+                font-size: 20px;
+                color: #000;
+                text-align: center;
+                line-height: 50px;
+
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }      
+    & .bg_dark {
+        background-color: #333;
+    }  
 }
 
 .bg_dark {
     background-color: #333;
 }
 
+
+@font-face {
+    font-family: 'EnvironmentR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/EnvironmentR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

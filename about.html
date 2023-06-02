@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="about.css" />
     <script
       src="https://kit.fontawesome.com/1fb7757c7d.js"
       crossorigin="anonymous"
@@ -70,11 +70,36 @@
     </section>
 
     <section class="home">
-      <img
-        src="https://www.pngplay.com/wp-content/uploads/1/Digital-Earth-PNG-Clipart-Background.png"
-        alt=""
-      />
+      <div class="home_wrap">
+        <p class="about_title1">
+          왜? 재활용을 해야할까요?
+        </p>
+        <p class="about_text1">
+          우리가 사용하는 플라스틱은 공장에서 <br>
+          만들어지고 버려져서 폐기하는 순간까지 <br>
+          온실가스를 배출해요.
+        </p>
+        <img class="about_img1" src="https://cdn.imweb.me/thumbnail/20200728/952d4c35a28c8.png" alt="이미지없음">
+        <p class="about_title1">
+          그렇다면, 우리는 어떻게 배출을 하면 좋을까요?
+        </p>
+        <p class="about_text1">
+          1. 물로 헹구어 겉면의 이물질 등을 제거후, 배출한다! <br>
+          2. 페트병은 비닐 라벨을 제거한 후 찌그러트려 뚜겅을 닫고 배출한다! <br>
+          3. 투명 페트병은 투명 페트병 전용 배출함을 이용한다! 
+        </p>
+        <img class="about_img1" src="https://images.pexels.com/photos/3735205/pexels-photo-3735205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="이미지없음">
+        <p class="about_title1">
+            그럼 플라스틱 배출 하러 가볼까요?
+        </p>
+        <div class="btn">
+          <a href="">
+            배출 하러 가기
+          </a>
+        </div>
+      </div>
     </section>
+
 
     <script>
       const sideMenu = document.querySelector('.menu_bar');
@@ -84,7 +109,7 @@
       const brightMode = document.querySelector('.theme-btn');
       const darkMoon = document.querySelector('#moon');
       const lightSun = document.querySelector('#sun');
-      const homeBg = document.querySelector('.home');
+      const homeBg = document.querySelector('.home_wrap');
       const sideBarBg = document.querySelector('.side_bar');
       const menuBarColor = document.querySelectorAll('.menu');
       const menuIcon = document.querySelectorAll('.nav_icon');

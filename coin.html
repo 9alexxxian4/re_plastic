@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="coin.css" />
     <script
       src="https://kit.fontawesome.com/1fb7757c7d.js"
       crossorigin="anonymous"
@@ -70,10 +70,37 @@
     </section>
 
     <section class="home">
-      <img
-        src="https://www.pngplay.com/wp-content/uploads/1/Digital-Earth-PNG-Clipart-Background.png"
-        alt=""
-      />
+        <div class="home_title">
+            <p class="home_title_text">
+                깨끗하게 재활용 해주신 <br>
+                <span></span>님, 감사합니다!
+                <i class="fa-regular fa-face-smile-wink" style="color: #000000;"></i>
+            </p>
+        </div>
+        <div class="home_cont">
+            <div class="home_point">
+                <p class="home_point1">보유 포인트</p>
+                <p class="home_point2">0P</p>
+                <div class="home_btn">
+                    <button class="btn">포인트 내역</button>
+                    <button class="btn">교환 신청</button>
+                </div>
+            </div>
+            <div class="home_use_details">
+                <p class="home_use_ct">재활용 횟수</p>
+                <div class="home_use_ct_name">
+                    <p class="home_use_ct_p">투명 페트병 
+                        <span class="home_use_ct_span">0</span>
+                    </p>
+                    <p class="home_use_ct_p">음료캔 
+                        <span class="home_use_ct_span">0</span> 
+                    </p>
+                    <p class="home_use_ct_p">PP뚜껑 
+                        <span class="home_use_ct_span">0</span> 
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script>
@@ -97,6 +124,7 @@
           sideItem.classList.toggle('side_bar_cont-on');
         }
       });
+      //사이드 바 구현
 
       brightMode.addEventListener('click', function(){
         darkMoon.classList.toggle('move_off');
@@ -113,17 +141,7 @@
           sideIcon.classList.toggle('color_white');
         }
       });
-
-      // brightMode.addEventListener('click', function(){
-      //   darkMoon.style.marginLeft = 25 + 'px';
-      //   darkMoon.style.opacity = 0;
-      //   lightSun.style.marginLeft = 29 + 'px';
-      //   lightSun.style.opacity = 1;
-      // });
-
-
-
-
+      //다크모드 구현
 
     </script>
   </body>
