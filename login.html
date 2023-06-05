@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="coin.css" />
+    <link rel="stylesheet" href="login.css" />
     <script
       src="https://kit.fontawesome.com/1fb7757c7d.js"
       crossorigin="anonymous"
@@ -54,7 +54,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="side_bar_cont">
+          <a href="login.html" class="side_bar_cont">
             <i class="fa-solid fa-arrow-right-to-bracket fa-lg nav_icon"></i>
             <span class="tooltip">로그인</span>
           </a>
@@ -70,54 +70,46 @@
     </section>
 
     <section class="home">
-        <div class="home_title">
-            <p class="home_title_text">
-                깨끗하게 재활용 해주신 <br>
-                <span></span>님, 감사합니다!
-                <i class="fa-regular fa-face-smile-wink" style="color: #000000;"></i>
-            </p>
-        </div>
-        <div class="home_cont">
-            <div class="home_point">
-                <p class="home_point1">보유 포인트</p>
-                <p class="home_point2">0P</p>
-                <div class="home_btn">
-                    <button class="btn">포인트 내역</button>
-                    <button class="btn">교환 신청</button>
-                </div>
+        <h1>로그인</h1>
+        <form action="">
+            <div class="input_wrap">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">아이디</label>
             </div>
-            <div class="home_use_details">
-                <p class="home_use_ct">재활용 횟수</p>
-                <div class="home_use_ct_name">
-                    <p class="home_use_ct_p">투명 페트병 
-                        <span class="home_use_ct_span">0</span>
-                    </p>
-                    <p class="home_use_ct_p">음료캔 
-                        <span class="home_use_ct_span">0</span> 
-                    </p>
-                    <p class="home_use_ct_p">PP뚜껑 
-                        <span class="home_use_ct_span">0</span> 
-                    </p>
-                </div>
+            <div class="input_wrap">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">비밀번호</label>
             </div>
+            <div class="login_btn">
+                <button id="btn" type="submit">로그인</button>
+            </div>
+        </form>
+        <div class="forgot">
+            <a href="#">아이디 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">회원가입</a>
         </div>
     </section>
 
     <script>
-      const sideMenu = document.querySelector('.menu_bar');
-      const sideBar = document.querySelector('.side_bar');
-      const navContent = document.querySelectorAll('.side_bar_cont');
-      //사이드 바 변수
-      const brightMode = document.querySelector('.theme-btn');
-      const darkMoon = document.querySelector('#moon');
-      const lightSun = document.querySelector('#sun');
-      const homeBg = document.querySelector('.home');
-      const sideBarBg = document.querySelector('.side_bar');
-      const menuBarColor = document.querySelectorAll('.menu');
-      const menuIcon = document.querySelectorAll('.nav_icon');
-      //다크모드 변수
+    const sideMenu = document.querySelector('.menu_bar');
+    const sideBar = document.querySelector('.side_bar');
+    const navContent = document.querySelectorAll('.side_bar_cont');
+    //사이드 바 변수
+    const brightMode = document.querySelector('.theme-btn');
+    const darkMoon = document.querySelector('#moon');
+    const lightSun = document.querySelector('#sun');
+    const homeBg = document.querySelector('.home');
+    const sideBarBg = document.querySelector('.side_bar');
+    const menuBarColor = document.querySelectorAll('.menu');
+    const menuIcon = document.querySelectorAll('.nav_icon');
+    //다크모드 변수
+    let id = document.querySelector('#id');
+    let pw = document.querySelector('#pw');
+    let btn = document.querySelector('#btn');
+    //로그인 변수
 
-      sideMenu.addEventListener('click', function () {
+      sideMenu.addEventListener('click', function(){
         sideMenu.classList.toggle('menu_bar-open');
         sideBar.classList.toggle('open');
         for (let sideItem of navContent) {
@@ -142,6 +134,21 @@
         }
       });
       //다크모드 구현
+
+      btn.addEventListener('click', function(){
+        if(id.value == "") {
+            id.nextElementSibling.classList.add('warning');
+            setTimeout(function(){
+                id.nextElementSibling.classList.remove('warning')
+            },1500);
+        }
+        else if(pw.value == "") {
+            pw.nextElementSibling.classList.add('warning');
+            setTimeout(function(){
+                pw.nextElementSibling.classList.remove('warning')
+            },1500);
+        }
+      });
 
     </script>
   </body>

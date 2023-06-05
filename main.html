@@ -42,7 +42,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="side_bar_cont">
+          <a href="exchange.html" class="side_bar_cont">
             <i class="fa-solid fa-arrow-right-arrow-left fa-lg nav_icon"></i>
             <span class="tooltip">교환</span>
           </a>
@@ -54,7 +54,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="side_bar_cont">
+          <a href="login.html" class="side_bar_cont">
             <i class="fa-solid fa-arrow-right-to-bracket fa-lg nav_icon"></i>
             <span class="tooltip">로그인</span>
           </a>
@@ -70,10 +70,24 @@
     </section>
 
     <section class="home">
-      <img
-        src="https://www.pngplay.com/wp-content/uploads/1/Digital-Earth-PNG-Clipart-Background.png"
-        alt=""
-      />
+      <div class="container">
+        <div class="card">
+          <div class="sneaker">
+            <div class="circle"></div>
+            <img src="https://www.pngplay.com/wp-content/uploads/1/Digital-Earth-PNG-Clipart-Background.png" alt="">
+          </div>
+          <div class="info">
+            <h1 class="title">Re:plastic</h1>
+            <h3 class="text">
+              우리의 쾌적한 환경에 <br> 
+              동참하는 당신이 자랑스럽습니다!
+            </h3>
+          </div>
+          <div class="purchase">
+            <button>재활용 하러 가기:)</button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script>
@@ -89,7 +103,16 @@
       const menuBarColor = document.querySelectorAll('.menu');
       const menuIcon = document.querySelectorAll('.nav_icon');
       //다크모드 변수
+      const container = document.querySelector('.container');
+      const card = document.querySelector('.card');
+      const title = document.querySelector('.title');
+      const earth = document.querySelector('.sneaker img');
+      const purchase = document.querySelector('.purchase button');
+      const text = document.querySelector('.text');
+      const circle = document.querySelector('.circle');
+      //메인 변수
 
+      //사이드바 메뉴 클릭시
       sideMenu.addEventListener('click', function () {
         sideMenu.classList.toggle('menu_bar-open');
         sideBar.classList.toggle('open');
@@ -98,11 +121,14 @@
         }
       });
 
+      //다크모드 구현
       brightMode.addEventListener('click', function(){
         darkMoon.classList.toggle('move_off');
         lightSun.classList.toggle('move_on');
         homeBg.classList.toggle('bg_dark');
         sideBarBg.classList.toggle('bg_dark');
+        text.classList.toggle('color_white');
+        title.classList.toggle('color_white');
         for (let menuItem of menuBarColor) {
           menuItem.classList.toggle('bg_white');
         }
@@ -113,15 +139,39 @@
           sideIcon.classList.toggle('color_white');
         }
       });
+      
+      //메인페이지 3D움직임 구현
+      container.addEventListener('mousemove', (e) => {
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+        let xAxisD = (xAxis * 2);
+        let yAxisD = (yAxis * 2);
+        card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) `;
+        earth.style.transform = `translate3D(${xAxisD}px,${yAxisD}px,120px) rotateZ(-45deg)`;
+        title.style.transform = `translate3D(${xAxisD}px,${yAxisD}px,140px)`;
+        text.style.transform = `translate3D(${xAxisD}px,${yAxisD}px,100px)`;
+        purchase.style.transform = `translate3D(${xAxisD}px,${yAxisD}px,150px)`;
+      });
+      //메인페이지 3D움직임 멈춤 구현
+      container.addEventListener('mouseenter', (e) => {
+        let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+        let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+        card.style.transition = 'none';
+        card.style.transform = "translateZ(-170px)";
+      });
 
-      // brightMode.addEventListener('click', function(){
-      //   darkMoon.style.marginLeft = 25 + 'px';
-      //   darkMoon.style.opacity = 0;
-      //   lightSun.style.marginLeft = 29 + 'px';
-      //   lightSun.style.opacity = 1;
-      // });
-
-
+      //메인페이지
+      container.addEventListener('mouseleave', (e) => {
+        card.style.transition = 'all 0.5s ease';
+        card.style.transform = "translateZ(0px)";
+        card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        title.style.transform = "translateZ(0)";
+        earth.style.transform = "translateZ(0px) rotateZ(0deg)";
+        purchase.style.transform = "translateZ(0px)";
+        purchase.style.boxShadow = "none";
+        text.style.transform = "translateZ(0px)";
+        circle.style.boxShadow = "none";
+      });
 
 
 

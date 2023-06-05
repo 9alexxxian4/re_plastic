@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 .side_bar {
   position: fixed;
   width: 100px;
@@ -164,97 +165,97 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.home .home_title {
-  width: 372px;
-  margin-top: 300px;
-}
-.home .home_title .home_title_text {
-  font-family: "EnvironmentR";
-  font-size: 40px;
-  line-height: 50px;
-}
-.home .home_cont {
-  width: 800px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 300px;
-}
-.home .home_cont .home_point {
-  width: 300px;
-  height: 300px;
-  background-color: #B1D7B4;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.home .home_cont .home_point .home_point1 {
-  display: flex;
   justify-content: center;
-  font-family: "EnvironmentR";
-  font-size: 30px;
-  margin-top: 25px;
 }
-.home .home_cont .home_point .home_point2 {
-  display: flex;
-  justify-content: center;
-  font-family: "EnvironmentR";
-  font-size: 40px;
+.home h1 {
+  font-size: 32px;
+  color: #000;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 50px;
 }
-.home .home_cont .home_point .home_btn {
-  display: flex;
-  justify-content: space-evenly;
+.home form .input_wrap {
+  width: 400px;
+  position: relative;
+  margin-top: 20px;
 }
-.home .home_cont .home_point .home_btn .btn {
-  width: 110px;
-  height: 50px;
-  background-color: #fff;
+.home form .input_wrap input {
+  width: 100%;
+  padding: 20px 10px 10px;
   border: none;
-  border-radius: 15px;
-  margin-bottom: 15px;
+  border-bottom: 1px solid #999;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  box-sizing: border-box;
+  background-color: transparent;
 }
-.home .home_cont .home_use_details {
-  width: 300px;
-  height: 300px;
+.home form .input_wrap input:focus + label {
+  top: 0;
+  left: 10px;
+  font-size: 13px;
+  color: #166cea;
+}
+.home form .input_wrap input:valid + label {
+  top: 0;
+  left: 10px;
+  font-size: 13px;
+  color: #166cea;
+}
+.home form .input_wrap label {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  font-size: 18px;
+  color: #999;
+  transition: top 0.5s ease;
+}
+.home form .login_btn {
+  width: 400px;
+  margin-top: 30px;
+}
+.home form .login_btn button {
+  width: 100%;
+  height: 50px;
   background-color: #B1D7B4;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.home .home_cont .home_use_details .home_use_ct {
-  display: flex;
-  justify-content: center;
-  font-family: "EnvironmentR";
-  font-size: 30px;
-  margin-top: 25px;
-}
-.home .home_cont .home_use_details .home_use_ct_name {
-  width: 250px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-self: center;
-  margin-bottom: 30px;
-  margin-left: 15px;
-}
-.home .home_cont .home_use_details .home_use_ct_name .home_use_ct_p {
-  width: 240px;
-  font-family: "EnvironmentR";
+  color: #fff;
   font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.home .forgot {
+  margin-top: 20px;
+  text-align: center;
   display: flex;
-  justify-content: space-between;
+  gap: 25px;
+}
+.home .forgot a {
+  font-size: 15px;
+  color: #999;
 }
 
 .bg_dark {
   background-color: #333;
 }
 
-@font-face {
-  font-family: "EnvironmentR";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/EnvironmentR.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}/*# sourceMappingURL=coin.css.map */
+.warning {
+  color: red !important;
+  animation: warning 0.3s ease;
+  animation-iteration-count: 3;
+}
+
+@keyframes warning {
+  0% {
+    transform: translateX(-8px);
+  }
+  25% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+}/*# sourceMappingURL=login.css.map */
